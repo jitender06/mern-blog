@@ -1,14 +1,16 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {BrowserRouter, Route, Routes } from "react-router-dom"
+import Header from './components/Header'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1 className='text-red-900'>hellow</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Header/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
